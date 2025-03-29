@@ -31,3 +31,4 @@ D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Debug\
 D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Debug\net9.0\staticwebassets.build.json
 D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Debug\net9.0\staticwebassets.build.json
 D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Debug\net9.0\staticwebassets.build.json
+D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Debug\net9.0\staticwebassets.build.json

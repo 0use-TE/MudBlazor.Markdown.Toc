@@ -298,3 +298,4 @@ D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc.Example\ob
 D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc.Example\obj\Debug\net9.0\MudBlazor.Markdown.Toc.Example.pdb
 D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc.Example\obj\Debug\net9.0\MudBlazor.Markdown.Toc.Example.genruntimeconfig.cache
 D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc.Example\obj\Debug\net9.0\ref\MudBlazor.Markdown.Toc.Example.dll
+D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc.Example\obj\Debug\net9.0\MudBlazor.Markdown.Toc.Example.sourcelink.json
