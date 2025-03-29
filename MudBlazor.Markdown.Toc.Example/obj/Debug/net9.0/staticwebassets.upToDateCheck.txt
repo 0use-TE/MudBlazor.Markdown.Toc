@@ -1,0 +1,2 @@
+D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc.Example\wwwroot\favicon.ico
+wwwroot\favicon.ico

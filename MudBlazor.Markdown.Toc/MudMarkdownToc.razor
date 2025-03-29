@@ -1,0 +1,155 @@
+﻿@using Microsoft.JSInterop
+@inject IJSRuntime JSRuntime
+<MudTreeView Items="TreeNodes" AutoExpand=AutoExpand Dense=Dense CheckBoxColor="CheckBoxColor" CheckedIcon="@CheckedIcon" Class="Class" Color="Color"
+Disabled=Disabled ReadOnly=ReadOnly SelectionMode="SelectionMode" Height="@Height"  Style="@Style"  Tag="Tag" AutoSelectParent=AutoSelectParent Hover=Hover
+ExpandOnClick=ExpandOnClick ExpandOnDoubleClick=ExpandOnDoubleClick MaxHeight="@MaxHeight" Ripple=Ripple Width="@Width" UncheckedIcon="@UncheckedIcon"
+UserAttributes="UserAttributes" IndeterminateIcon="@IndeterminateIcon" TriState="TriState" >
+    <ItemTemplate>
+        @{
+            var content = context as TocTreeNode;
+        }
+        <MudTreeViewItem  OnClick="@(()=>ScrollToTarget(content?.Id))" Text="@content?.Text" id="@content?.Id" Items="@content?.Children">
+        </MudTreeViewItem>
+    </ItemTemplate>
+</MudTreeView>
+@code
+{
+    private List<TreeItemData<string>> TreeNodes = new List<TreeItemData<string>>();
+    private bool needRender = true;
+    private IJSObjectReference? JSObject { get; set; }
+    private string? _monitoredValue;
+    [Parameter]
+    public Scroll ScrollBehavior { get; set; } = Scroll.Smooth;
+    [Parameter]
+    public string? MonitoredValue
+    {
+        get => _monitoredValue;
+        set => _monitoredValue = value; 
+    }
+    [Parameter]
+    public bool TriState{ get; set; }
+    [Parameter]
+    public string? IndeterminateIcon { get; set; }
+    [Parameter]
+    public Dictionary<string, object?>? UserAttributes{ get; set; }
+    [Parameter]
+    public string? UncheckedIcon{ get; set; }
+    [Parameter]
+    public bool ExpandOnDoubleClick{ get; set; }
+    [Parameter]
+    public bool ExpandOnClick { get; set; }
+    [Parameter]
+    public bool Hover{ get; set; }
+    [Parameter]
+    public bool Ripple { get; set; }
+    [Parameter]
+    public string? Id{ get; set; }
+    [Parameter]
+    public string? Width { get; set; }
+    [Parameter]
+    public string? Height{ get; set; }
+    [Parameter]
+    public string? MaxHeight { get; set; }
+    [Parameter]
+    public string? Style{ get; set; }
+    [Parameter]
+    public object? Tag{ get; set; }
+    [Parameter]
+    public bool AutoExpand{ get; set; }
+    [Parameter]
+    public SelectionMode SelectionMode{ get; set; }
+    [Parameter]
+    public bool AutoSelectParent { get; set; }
+    [Parameter]
+    public bool Dense{ get; set; }
+    [Parameter]
+    public Color CheckBoxColor{ get; set; }
+    [Parameter]
+    public string? CheckedIcon { get; set; }
+    [Parameter]
+    public string? Class{ get; set; }
+    [Parameter]
+    public Color Color{ get; set; }
+    [Parameter]
+    public bool Disabled{ get; set; }
+    [Parameter]
+    public bool ReadOnly{ get; set; }
+    private async Task ScrollToTarget(string? id)
+    {
+        string behavior = ScrollBehavior.ToString().ToLowerInvariant();
+        if(JSObject!=null)
+            await JSObject.InvokeVoidAsync("scrollToTarget", id,behavior);
+    }
+
+    public override Task SetParametersAsync(ParameterView parameters)
+    {
+        if (parameters.TryGetValue<string>(nameof(MonitoredValue), out var newValue))
+        {
+            if (!Equals(_monitoredValue, newValue)) 
+            {
+                needRender = true;
+                _monitoredValue = newValue;
+            }
+        }
+        return base.SetParametersAsync(parameters);
+    }
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(firstRender)
+            JSObject = await JSRuntime.InvokeAsync<IJSObjectReference>("import","./_content/MudBlazor.Markdown.Toc/Markdown.Toc.js");
+        if(needRender)
+        {
+            if(JSObject!=null)
+            {
+                List<TocNode>? tocNodes;
+                tocNodes = await JSObject.InvokeAsync<List<TocNode>>("getTocNodes", Id != null ? Id : null);
+                if(tocNodes!=null)
+                {
+                    TreeNodes = BuildTree(tocNodes);
+                }
+            }
+            needRender = false;
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
+    /// <summary>
+        /// Generate a data structure for the MudTree component
+        /// </summary>
+        /// <param name="items"></param>
+        /// <returns></returns>
+        public  List<TreeItemData<string>> BuildTree(List<TocNode> items)
+        {
+            List<TreeItemData<string>> tree = new List<TreeItemData<string>>();
+            Stack<TreeItemData<string>> stack = new Stack<TreeItemData<string>>();
+            foreach (var item in items)
+            {
+                TocTreeNode node = new TocTreeNode
+                {
+                    Text = item.Title,
+                    Id= item.Id,
+                    Level = item.Level
+                };
+                if (item.Level == 1)
+                {
+                    tree.Add(node);
+                    stack.Clear();
+                    stack.Push(node);
+                    continue;
+                }
+                while (stack.Count > 0 && (stack.Peek() as TocTreeNode)?.Level >= item.Level)
+                    stack.Pop();
+                if (stack.Count > 0)
+                {
+                    var parent = stack.Peek();
+                    if (parent.Children == null)
+                        parent.Children = new List<TreeItemData<string>>();
+                    parent.Children.Add(node);
+                }
+                else
+                    tree.Add(node);
+                stack.Push(node);
+            }
+            return tree;
+        }
+}

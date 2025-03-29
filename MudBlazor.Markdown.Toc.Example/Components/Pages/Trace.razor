@@ -1,0 +1,56 @@
+﻿@page "/trace"
+<MudMarkdown Value="@currentValue"  />
+<MudDrawer Open Fixed Anchor="Anchor.Right" ClipMode="DrawerClipMode.Always">
+      @* 添加要追踪的内容变化 *@
+    <MudMarkdownToc MonitoredValue="@currentValue"></MudMarkdownToc>
+    <MudButton OnClick="SwitchContent">SwitchContent 切换内容</MudButton>
+</MudDrawer>
+@code
+{
+    private string? currentValue;
+    private bool isSwitched;
+    protected override void OnInitialized()
+    {
+        currentValue = value1;
+        base.OnInitialized();
+    }
+    private void SwitchContent()
+    {
+        isSwitched = !isSwitched;
+        currentValue = isSwitched ? value1 : value;
+        StateHasChanged();
+    }
+    private string value = @"### 无锡学院介绍  
+### Introduction to Wuxi College  
+
+#### 中文  
+无锡学院是一所位于中国江苏省无锡市的公立本科院校，由教育部批准设立，隶属于江苏省人民政府管理，由无锡市政府主办，并得到南京信息工程大学的学术支持。学院前身为南京信息工程大学滨江学院，成立于2002年，后于2020年转设为独立的无锡学院。  
+
+无锡学院秉承“植根无锡、融入产业、面向区域、服务发展”的办学理念，致力于培养应用型、技术型人才。校园占地面积约1100余亩，建筑面积约35.9万平方米，坐落于无锡市锡山大道333号，毗邻锡东新城核心区，交通便利，环境优美。  
+
+学院设有14个学术单位，涵盖物联网工程、电子信息工程、自动化、环境工程等45个本科专业，涉及理、工、文、管、经、法、艺七大学科门类。目前在校本科生超过1.2万人，另有近300名国际学生和700余名与南京信息工程大学联合培养的研究生。教师队伍中，博士学位占比高达72%，拥有多位省级高层次人才。  
+
+无锡学院注重产学研结合，拥有物联网工程等17个国家级和省级一流本科专业建设点，以及电子科学与技术等多个江苏省“十四五”重点学科。学院还建有国家大学科技园，为学生提供实践创新平台。
+#### English  
+Wuxi College is a public undergraduate institution located in Wuxi City, Jiangsu Province, China. Approved by the Ministry of Education, it is managed by the Jiangsu Provincial Government, organized by the Wuxi Municipal Government, and academically supported by Nanjing University of Information Science and Technology. Originally established in 2002 as Binjiang College of Nanjing University of Information Science and Technology, it transitioned into an independent institution named Wuxi College in 2020.  
+
+Guided by the educational philosophy of Rooting in Wuxi, Integrating into Industry, Facing the Region, and Serving Development,Wuxi College is dedicated to cultivating applied and technical talents. The campus spans over 1,100 acres with a construction area of approximately 359,000 square meters. Located at No. 333 Xishan Avenue, it is adjacent to the core area of Xidong New Town, offering convenient transportation and a picturesque environment.  
+
+The college comprises 14 academic schools, offering 45 undergraduate programs such as Internet of Things Engineering, Electronic Information Engineering, Automation, and Environmental Engineering, covering seven major disciplines: Science, Engineering, Literature, Management, Economics, Law, and Arts. It currently enrolls over 12,000 undergraduate students, nearly 300 international students, and more than 700 postgraduate students trained in collaboration with Nanjing University of Information Science and Technology. Among its faculty, 72% hold doctoral degrees, including numerous high-level talents recognized at the provincial level.  
+
+Wuxi College emphasizes the integration of industry, academia, and research. It boasts 17 national and provincial first-class undergraduate program construction sites, including Internet of Things Engineering, and several key disciplines under Jiangsu’s 14th Five-Year Plan, such as Electronic Science and Technology. The college also hosts a National University Science and Technology Park, providing a platform for practical innovation.";
+    private string value1 = @"### 你好，我是 Ouse 👋
+
+一名热爱 .NET 的开发者，代码如诗，架构如画。我钟情于微软技术栈，后端用 Web API，前端玩 MudBlazor，偶尔还会折腾 Unity。
+
+说起我啊，从小就喜欢玩游戏，喜欢摆弄电脑。13 岁那年，我开始折腾装机，学习各种电脑组装知识，给别人配电脑💻、装系统，完全不在话下。到了高中，我开始接触编程，但奈何学业繁忙，没能坚持太久……直到上了大学，我终于彻底沉迷在了编程的世界。记得第一次走进学校图书馆的自然科学书籍区，我惊讶得说不出话——天哪，这里竟然有这么多关于计算机、电子、数学的书籍！从那一刻起，我便下定决心，要用代码去探索世界，去创造价值。我坚信，代码不仅仅是工具，更是一种艺术，而编程，是我与世界对话的方式。
+
+除了写代码，我还养了一只名叫 Code（扣嘚）的非洲迷你刺猬🦔，它是我调试 bug 时最忠实的听众。我喜欢生椰拿铁☕，喜欢音乐，喜欢一切能让世界变得更有秩序的东西。这个博客是我思考与成长的记录，关于技术，关于生活，也关于代码之外的世界。😁
+### Hello, I'm Ouse 👋
+
+A passionate .NET developer who sees code as poetry and architecture as art. I’m deeply in love with the Microsoft tech stack, building backends with Web API, crafting frontends with MudBlazor, and occasionally dabbling in Unity.
+
+As for me, I’ve been fascinated by games and computers since I was a kid. At 13, I started tinkering with PC building, learning all about hardware assembly, helping others set up their computers💻, and installing systems—it was a breeze. In high school, I dipped my toes into programming, but with a heavy academic load, I couldn’t stick with it for long… until university, when I finally fell headfirst into the world of coding. I still remember stepping into the natural sciences section of the university library for the first time—I was speechless. “Wow, there are so many books on computers, electronics, and math!” From that moment, I resolved to explore the world through code and create value with it. I firmly believe that code isn’t just a tool—it’s an art form, and programming is my way of conversing with the world.
+
+Beyond coding, I have a little African pygmy hedgehog named Code🦔, my most loyal listener when I’m debugging. I enjoy coconut lattes☕, music, and anything that brings more order to the world. This blog is a record of my thoughts and growth—about tech, life, and the world beyond code. 😁";
+}

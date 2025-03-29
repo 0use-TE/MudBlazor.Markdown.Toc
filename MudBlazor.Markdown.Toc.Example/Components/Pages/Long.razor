@@ -1,0 +1,249 @@
+﻿@page "/long"
+
+<MudMarkdown Value="@value" />
+<MudDrawer Open Fixed Anchor="Anchor.Right" ClipMode="DrawerClipMode.Always">
+    <MudMarkdownToc></MudMarkdownToc>
+</MudDrawer>
+@code
+{
+    private string value = @"# V2RayA：网络代理服务
+
+本文将详细介绍如何部署并使用 [v2rayA](https://v2raya.org/docs/prologue/introduction/)，涵盖本地代理共享、标准安装及容器部署等多种方式。
+
+## 通过本地主机共享代理
+
+在本地主机中运行 Clash Verge（或类似工具）实现科学上网后，可以共享代理服务（允许局域网连接）到其他设备或远程主机。
+
+1. **开启本地代理：** 假设 Clash 本地代理端口为 `7897`，启动后在本机测试：
+
+   ```bash
+   curl -x http://localhost:7897 http://httpbin.org/ip
+   ```
+
+2. **通过 SSH 映射本地端口：** 在远程主机上，使用 SSH 映射端口：
+
+   ```bash
+   ssh -R 7897:localhost:7897 user@remote_host
+   ```
+
+3. **设置远程代理环境变量：** 在远程主机上临时启用代理（SSH速度慢，若远程主机可直接访问到主机将loaclhost替换为主机IP）：
+
+   ```bash
+   export http_proxy=http://localhost:7897
+   export https_proxy = http://localhost:7897
+   ```
+
+   验证是否成功：
+
+   ```bash
+   curl http://httpbin.org/ip
+   ```
+
+   **取消方法：** 重启终端或使用以下命令清除代理：
+
+   ```bash
+   unset http_proxy https_proxy
+   ```
+
+## 标准安装 V2RayA
+
+### 添加公钥
+
+将 V2RayA 的官方公钥导入系统：
+
+```bash
+wget -qO - https://apt.v2raya.org/key/public-key.asc | sudo tee /etc/apt/keyrings/v2raya.asc
+```
+
+### 添加 V2RayA 软件源
+
+添加 V2RayA 的 APT 软件源并更新系统包：
+
+```bash
+echo deb [signed-by=/etc/apt/keyrings/v2raya.asc] https://apt.v2raya.org/ v2raya main | sudo tee /etc/apt/sources.list.d/v2raya.list
+sudo apt update
+```
+
+### 安装 V2RayA 和核心组件
+
+安装 V2RayA 和 V2Ray（或 Xray）核心：
+
+```bash
+sudo apt install v2raya v2ray
+```
+
+### 启动并配置服务
+
+启动 V2RayA 服务并设置为开机自动启动：
+
+```bash
+sudo systemctl start v2raya.service
+sudo systemctl enable v2raya.service
+```
+
+## Docker 部署 V2RayA
+
+### 安装 Docker
+
+使用官方提供的一键安装脚本快速安装 Docker：
+
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh./get-docker.sh
+```
+
+### 配置 Docker Daemon 代理
+
+创建代理配置目录
+
+```bash
+sudo mkdir -p /etc/systemd/system/docker.service.d
+```
+
+新建并编辑`http-proxy.conf`配置文件（例如使用 `vi`）：
+
+```bash
+sudo vi /etc/systemd/system/docker.service.d/http-proxy.conf
+```
+
+在文件中添加以下内容，根据实际代理信息修改相关参数：
+
+```ini
+[Service]
+Environment = HTTP_PROXY=http://localhost:7897/
+Environment= HTTPS_PROXY=http://localhost:7897/
+Environment= NO_PROXY=localhost,127.0.0.1,.example.com
+```
+
+- **HTTP_PROXY**：用于代理 HTTP 请求。
+- **HTTPS_PROXY**：用于代理 HTTPS 请求。
+- **NO_PROXY**：指定不走代理的 IP 或域名。
+
+### 应用配置并重启 Docker
+
+执行以下命令以应用新的代理配置：
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+### 拉取 V2RayA 容器镜像
+
+通过以下命令从 Docker Hub 拉取 V2RayA 的镜像：
+
+```bash
+sudo docker pull mzz2017/v2raya
+```
+
+### 取消 Daemon 代理
+
+如需移除 Docker Daemon 的代理设置，可删除 `http-proxy.conf` 文件并重启 Docker 服务：
+
+```bash
+sudo rm /etc/systemd/system/docker.service.d/http-proxy.conf
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+### 运行 V2RayA 容器
+
+使用以下命令运行 V2RayA 容器：
+
+```bash
+sudo docker run -d \
+  --restart= always \
+  --privileged \
+  --network= host \
+  --name v2raya \
+  -e V2RAYA_LOG_FILE =/ tmp / v2raya.log \
+  -e V2RAYA_V2RAY_BIN =/ usr / local / bin / v2ray \
+  -e V2RAYA_NFTABLES_SUPPORT = off \
+  -e IPTABLES_MODE = legacy \
+  -v /lib/modules:/lib/modules:ro \
+  -v /etc/resolv.conf:/etc/resolv.conf \
+  -v /etc/v2raya:/etc/v2raya \
+  mzz2017/v2raya
+```
+
+- `--restart= always`：确保容器在系统重启或意外停止后自动重启。
+- `--privileged`：为容器提供特权模式，允许管理网络等资源。
+- `--network= host`：容器与宿主机共享网络栈，减少端口映射的复杂性。
+- `-e V2RAYA_LOG_FILE`：指定日志文件路径。
+- `-v`：挂载本地文件系统到容器，确保配置持久化。
+
+### 使用 Docker Compose 文件运行
+
+创建目录并进入
+
+```
+mkdir -p ~/v2raya/config && cd ~/v2raya
+```
+
+创建 docker-compose.yml 文件
+
+```yaml
+services:  # 定义一组服务
+  v2raya:  # 服务名: v2raya
+    container_name: v2raya  # 指定容器的名称为 v2raya
+    image: mzz2017/v2raya  # 使用的 Docker 镜像为 mzz2017/v2raya，这是 V2Raya 的官方镜像
+    restart: unless-stopped  # 除非手动停止，否则会根据最后状态重启
+    privileged: true  # 给予容器特权，使其可以访问主机的设备
+    network_mode: host  # 使用主机网络模式，容器将共享主机的网络栈，使用与主机相同的 IP 地址
+
+    environment:  # 设置环境变量
+      - V2RAYA_LOG_FILE=/tmp/v2raya.log  # 指定 V2Raya 的日志文件路径
+      - V2RAYA_V2RAY_BIN=/usr/local/bin/v2ray  # 指定 V2Ray 可执行文件路径
+      - V2RAYA_NFTABLES_SUPPORT=off  # 关闭 nftables 支持
+      - IPTABLES_MODE=legacy  # 设置 iptables 模式为 legacy，可能是因为系统兼容性原因
+
+    volumes:  # 定义卷，用于数据持久化
+      - /lib/modules:/lib/modules:ro          # 挂载主机的内核模块目录，设置为只读（ro），保持内核模块路径和版本一致
+      - /etc/resolv.conf:/etc/resolv.conf     # 挂载主机的 DNS 配置文件，保持容器的 DNS 解析设置与主机一致
+      - ./config:/etc/v2raya                  # 将当前目录下的 config 目录挂载为容器内的配置目录，以便于管理配置文件
+```
+
+启动容器
+
+```
+docker compose up -d
+```
+
+## 使用 V2RayA
+
+V2RayA 默认使用 2017 端口提供 Web UI 服务，可通过浏览器访问：
+
+```plaintext
+http://localhost:2017
+```
+
+### 创建管理员账号
+
+首次访问时，需要创建管理员账号，记住用户名和密码。如忘记，可通过以下命令重置：
+
+```bash
+sudo v2raya --reset-password
+```
+
+### 导入节点
+
+在 Web UI 中，可以通过以下方式导入代理节点：
+
+- 粘贴节点链接
+- 导入订阅链接
+- 扫描二维码
+- 批量导入
+
+### 连接节点和启动服务
+
+- 选择一个或多个节点连接（推荐 6 个以内）。
+- 点击左上角按钮启动服务。连接的节点呈蓝色表示成功。
+
+### 配置代理方式
+
+V2RayA 提供以下几种代理方式：
+
+1. **透明代理（推荐）：** 支持全局代理，适合大部分使用场景。在设置中开启透明代理，并选择 GFWList 或其他分流规则。
+2. **系统代理：** 手动配置系统的 HTTP 和 HTTPS 代理。
+3. **局域网共享：** 在设置中开启局域网共享，并确保防火墙允许相关端口。";
+}

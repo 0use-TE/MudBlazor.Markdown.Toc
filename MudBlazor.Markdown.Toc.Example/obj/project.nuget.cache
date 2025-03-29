@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "YpyO4VlJ5so=",
+  "success": true,
+  "projectFilePath": "D:\\VisualSutdioProjects\\MudBlazor.Markdown.Toc\\MudBlazor.Markdown.Toc.Example\\MudBlazor.Markdown.Toc.Example.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\22165\\.nuget\\packages\\markdig\\0.40.0\\markdig.0.40.0.nupkg.sha512",
+    "C:\\Users\\22165\\.nuget\\packages\\microsoft.aspnetcore.authorization\\9.0.3\\microsoft.aspnetcore.authorization.9.0.3.nupkg.sha512",
+    "C:\\Users\\22165\\.nuget\\packages\\microsoft.aspnetcore.components\\9.0.3\\microsoft.aspnetcore.components.9.0.3.nupkg.sha512",
+    "C:\\Users\\22165\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\9.0.3\\microsoft.aspnetcore.components.analyzers.9.0.3.nupkg.sha512",
+    "C:\\Users\\22165\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\9.0.3\\microsoft.aspnetcore.components.forms.9.0.3.nupkg.sha512",
+    "C:\\Users\\22165\\.nuget\\packages\\microsoft.aspnetcore.components.web\\9.0.3\\microsoft.aspnetcore.components.web.9.0.3.nupkg.sha512",
+    "C:\\Users\\22165\\.nuget\\packages\\microsoft.aspnetcore.metadata\\9.0.3\\microsoft.aspnetcore.metadata.9.0.3.nupkg.sha512",
+    "C:\\Users\\22165\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.3\\microsoft.extensions.dependencyinjection.9.0.3.nupkg.sha512",
+    "C:\\Users\\22165\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.3\\microsoft.extensions.dependencyinjection.abstractions.9.0.3.nupkg.sha512",
+    "C:\\Users\\22165\\.nuget\\packages\\microsoft.extensions.localization\\9.0.1\\microsoft.extensions.localization.9.0.1.nupkg.sha512",
+    "C:\\Users\\22165\\.nuget\\packages\\microsoft.extensions.localization.abstractions\\9.0.1\\microsoft.extensions.localization.abstractions.9.0.1.nupkg.sha512",
+    "C:\\Users\\22165\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.3\\microsoft.extensions.logging.abstractions.9.0.3.nupkg.sha512",
+    "C:\\Users\\22165\\.nuget\\packages\\microsoft.extensions.options\\9.0.3\\microsoft.extensions.options.9.0.3.nupkg.sha512",
+    "C:\\Users\\22165\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.3\\microsoft.extensions.primitives.9.0.3.nupkg.sha512",
+    "C:\\Users\\22165\\.nuget\\packages\\microsoft.jsinterop\\9.0.3\\microsoft.jsinterop.9.0.3.nupkg.sha512",
+    "C:\\Users\\22165\\.nuget\\packages\\mudblazor\\8.4.0\\mudblazor.8.4.0.nupkg.sha512",
+    "C:\\Users\\22165\\.nuget\\packages\\mudblazor.markdown\\8.0.0\\mudblazor.markdown.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

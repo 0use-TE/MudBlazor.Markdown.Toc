@@ -1,0 +1,7 @@
+D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\wwwroot\tsconfig.json
+D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\wwwroot\Markdown.Toc.js.map
+D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\wwwroot\Markdown.Toc.js
+wwwroot\Markdown.Toc.js
+wwwroot\Markdown.Toc.js.map
+wwwroot\Markdown.Toc.ts
+wwwroot\tsconfig.json

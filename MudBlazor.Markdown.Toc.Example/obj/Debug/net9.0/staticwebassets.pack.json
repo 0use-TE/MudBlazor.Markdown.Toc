@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\VisualSutdioProjects\\MudBlazor.Markdown.Toc\\MudBlazor.Markdown.Toc.Example\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.MudBlazor.Markdown.Toc.Example.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.MudBlazor.Markdown.Toc.Example.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.MudBlazor.Markdown.Toc.Example.props",
+      "PackagePath": "build\\MudBlazor.Markdown.Toc.Example.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.MudBlazor.Markdown.Toc.Example.props",
+      "PackagePath": "buildMultiTargeting\\MudBlazor.Markdown.Toc.Example.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.MudBlazor.Markdown.Toc.Example.props",
+      "PackagePath": "buildTransitive\\MudBlazor.Markdown.Toc.Example.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
