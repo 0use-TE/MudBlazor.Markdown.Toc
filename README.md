@@ -82,7 +82,7 @@ The MudMarkdownToc component internally uses the MudTreeView component, so it in
 </MudDrawer>
 ```
 
-### Conclusion
+### End
 
 A big thank you to the contributors of MudBlazor and MudBlazor.Markdown!
 
