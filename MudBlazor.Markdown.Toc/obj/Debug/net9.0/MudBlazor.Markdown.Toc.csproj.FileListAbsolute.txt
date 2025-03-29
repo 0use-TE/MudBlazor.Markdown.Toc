@@ -273,3 +273,4 @@ D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Debug\
 D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Debug\net9.0\compressed\njr3h26l1x-sk32w8233j.gz
 D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Debug\net9.0\compressed\i73ounfqbs-ylrk06h9de.gz
 D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Debug\net9.0\compressed\56jz0a2ija-9x72zlemwx.gz
+D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Debug\net9.0\MudBlazor.Markdown.Toc.sourcelink.json
