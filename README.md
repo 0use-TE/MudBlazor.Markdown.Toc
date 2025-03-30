@@ -1,7 +1,7 @@
 #### Language
 - [🇨🇳 中文](./ReadMe/ReadMe.cn.md)  
+
 - [🇺🇸 English](./ReadMe/ReadMe.en.md)  
-- [🇯🇵 日本語](./ReadMe/ReadMe.jp.md)
 
 - ## MudBlazor.Markdown.Toc
 
@@ -24,7 +24,13 @@ You can clone the repository locally, start the sample project, and experience i
 
 1. Complete the configuration of MudBlazor and MudBlazor.Markdown.
 
-2. Reference the NuGet package. The package will be added soon (due to MudBlazor's prefix, the package will take a few days to upload). You can now go to the release page, download and import it into your project, or download the project and package it yourself.
+2. Install Package
+
+   ```shell
+   NuGet\Install-Package MudMarkdown.Toc -Version 1.0.1
+   ```
+
+   NuGet URL:[NuGet Gallery | MudMarkdown.Toc 1.0.1](https://www.nuget.org/packages/MudMarkdown.Toc/#readme-body-tab)
 
 3. Depending on the Blazor project type, import the corresponding file. For Blazor Web App, import it into App.razor; for standalone Blazor Wasm, import it into index.html:
 
@@ -89,5 +95,4 @@ A big thank you to the contributors of MudBlazor and MudBlazor.Markdown!
 If you have any questions, please contact me or open an Issue!
 
 This is my first NuGet package, and I hope it helps your project. If you like it, consider giving it a Star and a Follow. I will continue to create new tools for the .NET community ❤❤❤.
-
 

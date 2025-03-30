@@ -19,7 +19,13 @@
 
 1. 先完成MudBlazor和MudBlazor.Markdown的配置。
 
-2. 引用nuget包，即将添加Nuget包(由于MudBlazor的前缀导致包要等几天才能上传)，您现在可以前往发布页面，下载后导入自己的项目，或者下载项目后自己打包。
+2. 安装Nuget包   
+
+   ```shell
+   NuGet\Install-Package MudMarkdown.Toc -Version 1.0.1
+   ```
+
+   NuGet地址:[NuGet Gallery | MudMarkdown.Toc 1.0.1](https://www.nuget.org/packages/MudMarkdown.Toc/#readme-body-tab)
 
 3. 根据blazor项目不同引入到对用的文件，Blazor Web App引入到App.razor,Blazor 独立 Wasm引入到index.html
 

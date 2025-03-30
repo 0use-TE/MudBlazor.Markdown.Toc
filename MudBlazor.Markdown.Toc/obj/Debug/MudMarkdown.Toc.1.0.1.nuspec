@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>MudMarkdown.Toc</id>
+    <version>1.0.1</version>
+    <title>MudMarkdown.Toc</title>
+    <authors>Ouse</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <description>Package Description</description>
+    <repository type="git" commit="aba514dfd083b783c75831d7d8974fd7237ff35a" />
+    <dependencies>
+      <group targetFramework="net9.0">
+        <dependency id="Microsoft.AspNetCore.Components.Web" version="9.0.3" exclude="Build,Analyzers" />
+        <dependency id="MudBlazor.Markdown" version="8.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <contentFiles>
+      <files include="any/net9.0/Properties/launchSettings.json" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\bin\Debug\net9.0\MudBlazor.Markdown.Toc.dll" target="lib\net9.0\MudBlazor.Markdown.Toc.dll" />
+    <file src="D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\Properties\launchSettings.json" target="content\Properties\launchSettings.json" />
+    <file src="D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\Properties\launchSettings.json" target="contentFiles\any\net9.0\Properties\launchSettings.json" />
+    <file src="D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\wwwroot\Markdown.Toc.js" target="staticwebassets\Markdown.Toc.js" />
+    <file src="D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\wwwroot\Markdown.Toc.js.map" target="staticwebassets\Markdown.Toc.js.map" />
+    <file src="D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\wwwroot\Markdown.Toc.ts" target="staticwebassets\Markdown.Toc.ts" />
+    <file src="D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\wwwroot\tsconfig.json" target="staticwebassets\tsconfig.json" />
+    <file src="D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Debug\net9.0\staticwebassets\msbuild.MudMarkdown.Toc.Microsoft.AspNetCore.StaticWebAssetEndpoints.props" target="build\Microsoft.AspNetCore.StaticWebAssetEndpoints.props" />
+    <file src="D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Debug\net9.0\staticwebassets\msbuild.MudMarkdown.Toc.Microsoft.AspNetCore.StaticWebAssets.props" target="build\Microsoft.AspNetCore.StaticWebAssets.props" />
+    <file src="D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Debug\net9.0\staticwebassets\msbuild.build.MudMarkdown.Toc.props" target="build\MudMarkdown.Toc.props" />
+    <file src="D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.MudMarkdown.Toc.props" target="buildMultiTargeting\MudMarkdown.Toc.props" />
+    <file src="D:\VisualSutdioProjects\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.MudMarkdown.Toc.props" target="buildTransitive\MudMarkdown.Toc.props" />
+  </files>
+</package>

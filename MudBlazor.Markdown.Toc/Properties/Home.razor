@@ -1,0 +1,26 @@
+﻿@page "/"
+<MudMarkdown Value="@value"/>
+<MudDrawer Open  Fixed Anchor="Anchor.Right" ClipMode="DrawerClipMode.Always">
+<MudMarkdownToc></MudMarkdownToc>
+</MudDrawer>
+@code
+{
+    private string value = @"### 无锡学院介绍  
+
+#### 中文  
+无锡学院是一所位于中国江苏省无锡市的公立本科院校，由教育部批准设立，隶属于江苏省人民政府管理，由无锡市政府主办，并得到南京信息工程大学的学术支持。学院前身为南京信息工程大学滨江学院，成立于2002年，后于2020年转设为独立的无锡学院。  
+
+无锡学院秉承“植根无锡、融入产业、面向区域、服务发展”的办学理念，致力于培养应用型、技术型人才。校园占地面积约1100余亩，建筑面积约35.9万平方米，坐落于无锡市锡山大道333号，毗邻锡东新城核心区，交通便利，环境优美。  
+
+学院设有14个学术单位，涵盖物联网工程、电子信息工程、自动化、环境工程等45个本科专业，涉及理、工、文、管、经、法、艺七大学科门类。目前在校本科生超过1.2万人，另有近300名国际学生和700余名与南京信息工程大学联合培养的研究生。教师队伍中，博士学位占比高达72%，拥有多位省级高层次人才。  
+
+无锡学院注重产学研结合，拥有物联网工程等17个国家级和省级一流本科专业建设点，以及电子科学与技术等多个江苏省“十四五”重点学科。学院还建有国家大学科技园，为学生提供实践创新平台。
+#### English  
+Wuxi College is a public undergraduate institution located in Wuxi City, Jiangsu Province, China. Approved by the Ministry of Education, it is managed by the Jiangsu Provincial Government, organized by the Wuxi Municipal Government, and academically supported by Nanjing University of Information Science and Technology. Originally established in 2002 as Binjiang College of Nanjing University of Information Science and Technology, it transitioned into an independent institution named Wuxi College in 2020.  
+
+Guided by the educational philosophy of Rooting in Wuxi, Integrating into Industry, Facing the Region, and Serving Development,Wuxi College is dedicated to cultivating applied and technical talents. The campus spans over 1,100 acres with a construction area of approximately 359,000 square meters. Located at No. 333 Xishan Avenue, it is adjacent to the core area of Xidong New Town, offering convenient transportation and a picturesque environment.  
+
+The college comprises 14 academic schools, offering 45 undergraduate programs such as Internet of Things Engineering, Electronic Information Engineering, Automation, and Environmental Engineering, covering seven major disciplines: Science, Engineering, Literature, Management, Economics, Law, and Arts. It currently enrolls over 12,000 undergraduate students, nearly 300 international students, and more than 700 postgraduate students trained in collaboration with Nanjing University of Information Science and Technology. Among its faculty, 72% hold doctoral degrees, including numerous high-level talents recognized at the provincial level.  
+
+Wuxi College emphasizes the integration of industry, academia, and research. It boasts 17 national and provincial first-class undergraduate program construction sites, including Internet of Things Engineering, and several key disciplines under Jiangsu’s 14th Five-Year Plan, such as Electronic Science and Technology. The college also hosts a National University Science and Technology Park, providing a platform for practical innovation.";
+}
