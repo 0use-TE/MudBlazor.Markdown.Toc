@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\MudBlazor.Markdown.Toc.props" />
+</Project>

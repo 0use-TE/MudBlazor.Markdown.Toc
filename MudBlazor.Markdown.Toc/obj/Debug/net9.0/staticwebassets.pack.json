@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\Project\\MudBlazor.Markdown.Toc\\MudBlazor.Markdown.Toc\\wwwroot\\Markdown.Toc.js",
+      "PackagePath": "staticwebassets\\Markdown.Toc.js"
+    },
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\Project\\MudBlazor.Markdown.Toc\\MudBlazor.Markdown.Toc\\wwwroot\\Markdown.Toc.js.map",
+      "PackagePath": "staticwebassets\\Markdown.Toc.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\Project\\MudBlazor.Markdown.Toc\\MudBlazor.Markdown.Toc\\wwwroot\\Markdown.Toc.ts",
+      "PackagePath": "staticwebassets\\Markdown.Toc.ts"
+    },
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\Project\\MudBlazor.Markdown.Toc\\MudBlazor.Markdown.Toc\\wwwroot\\tsconfig.json",
+      "PackagePath": "staticwebassets\\tsconfig.json"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.MudBlazor.Markdown.Toc.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.MudBlazor.Markdown.Toc.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.MudBlazor.Markdown.Toc.props",
+      "PackagePath": "build\\MudBlazor.Markdown.Toc.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.MudBlazor.Markdown.Toc.props",
+      "PackagePath": "buildMultiTargeting\\MudBlazor.Markdown.Toc.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.MudBlazor.Markdown.Toc.props",
+      "PackagePath": "buildTransitive\\MudBlazor.Markdown.Toc.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

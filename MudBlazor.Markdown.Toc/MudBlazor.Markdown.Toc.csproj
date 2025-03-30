@@ -3,7 +3,27 @@
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
+    <IsPackable>true</IsPackable>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>MudMarkdown.Toc</Title>
+	  <PackageId>MudMarkdown.Toc</PackageId>
+    <Authors>Ouse</Authors>
+	  <!-- 确保项目引用也打包 -->
+	  <EnableDefaultContentItems>true</EnableDefaultContentItems>
+	  <IncludeReferencedProjects>true</IncludeReferencedProjects>
+	  <Version>1.0.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <IsTrimmable>True</IsTrimmable>
+    <IsAotCompatible>False</IsAotCompatible>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsTrimmable>True</IsTrimmable>
+    <IsAotCompatible>False</IsAotCompatible>
   </PropertyGroup>
 
 
@@ -15,5 +35,5 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.3" />
     <PackageReference Include="MudBlazor.Markdown" Version="8.0.0" />
   </ItemGroup>
-
+	
 </Project>

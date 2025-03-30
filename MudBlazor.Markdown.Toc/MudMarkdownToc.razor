@@ -96,7 +96,7 @@ UserAttributes="UserAttributes" IndeterminateIcon="@IndeterminateIcon" TriState=
     protected async override Task OnAfterRenderAsync(bool firstRender)
     {
         if(firstRender)
-            JSObject = await JSRuntime.InvokeAsync<IJSObjectReference>("import","./_content/MudBlazor.Markdown.Toc/Markdown.Toc.js");
+            JSObject = await JSRuntime.InvokeAsync<IJSObjectReference>("import","./_content/MudMarkdown.Toc/Markdown.Toc.js");
         if(needRender)
         {
             if(JSObject!=null)
