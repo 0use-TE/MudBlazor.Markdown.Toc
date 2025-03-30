@@ -45,6 +45,8 @@ You can clone the repository locally, start the sample project, and experience i
 5. Use the MudMarkdownToc component. You can place this component anywhere, here it is placed inside a MudDrawer. If your page has only one MudMarkdown component and the content does not change (users do not modify the Value parameter on this page), you can directly use this component. For other requirements, check the API section.
 
    ```html
+   //The componment of MudMarkdown must before in the componment of MudMarkdownToc
+   //Because the componment of MudMarkdown should render before the MudMakrdownToc
    <MudMarkdown Value="@value"/>
    <MudDrawer Open Fixed Anchor="Anchor.Right" ClipMode="DrawerClipMode.Always">
    <MudMarkdownToc></MudMarkdownToc>

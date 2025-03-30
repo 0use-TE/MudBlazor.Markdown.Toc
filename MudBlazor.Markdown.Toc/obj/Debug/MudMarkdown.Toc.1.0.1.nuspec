@@ -8,7 +8,7 @@
     <license type="expression">MIT</license>
     <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
     <description>Package Description</description>
-    <repository type="git" commit="aba514dfd083b783c75831d7d8974fd7237ff35a" />
+    <repository type="git" commit="4c73271a2c72b96c6ae691f1c2439edd81a12850" />
     <dependencies>
       <group targetFramework="net9.0">
         <dependency id="Microsoft.AspNetCore.Components.Web" version="9.0.3" exclude="Build,Analyzers" />

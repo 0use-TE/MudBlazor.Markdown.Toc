@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ouse")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1+aba514dfd083b783c75831d7d8974fd7237ff35a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1+4c73271a2c72b96c6ae691f1c2439edd81a12850")]
 [assembly: System.Reflection.AssemblyProductAttribute("MudBlazor.Markdown.Toc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MudBlazor.Markdown.Toc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.1.0")]

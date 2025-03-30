@@ -42,6 +42,7 @@
 5. 使用MudMarkToc组件，您可以将该组件放在任意位置，这里放在了MudDrawer里面，如果您的页面只有一个MudMarkdown组件，并且内容不会更改(用户在该页面后，不会修改Value参数)，您可以直接使用该组件，如果有前面说的需求，您可以查看Api部分
 
    ```html
+   //这里MudMarkdown组件必须放在MudMarkdownToc前面，因为MudMarkdown需要先渲染，MudMarkdownToc才能正常解析！
    <MudMarkdown Value="@value"/>
    <MudDrawer Open  Fixed Anchor="Anchor.Right" ClipMode="DrawerClipMode.Always">
    <MudMarkdownToc></MudMarkdownToc>
