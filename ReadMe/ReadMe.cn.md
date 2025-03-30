@@ -30,7 +30,7 @@
 3. 根据blazor项目不同引入到对用的文件，Blazor Web App引入到App.razor,Blazor 独立 Wasm引入到index.html
 
    ```html
-    <script src=@Assets["_content/MudBlazor.Markdown.Toc/Markdown.Toc.js"] type="module"></scrip>
+    <script src=@Assets["_content/MudMarkdown.Toc/Markdown.Toc.js"] type="module"></scrip>
    ```
 
 4. 引入命名空间

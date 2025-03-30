@@ -33,7 +33,7 @@ You can clone the repository locally, start the sample project, and experience i
 3. Depending on the Blazor project type, import the corresponding file. For Blazor Web App, import it into App.razor; for standalone Blazor Wasm, import it into index.html:
 
    ```html
-    <script src=@Assets["_content/MudBlazor.Markdown.Toc/Markdown.Toc.js"] type="module"></script>
+    <script src=@Assets["_content/MudMarkdown.Toc/Markdown.Toc.js"] type="module"></script>
    ```
 
 4. Import the namespace:
