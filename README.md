@@ -1,8 +1,6 @@
 #### Language
 - [🇨🇳 中文](./ReadMe/ReadMe.cn.md)  
 
-- [🇺🇸 English](./ReadMe/ReadMe.en.md)  
-
 - ## MudBlazor.Markdown.Toc
 
 ### Introduction
