@@ -13,7 +13,7 @@
 	  <!-- 确保项目引用也打包 -->
 	  <EnableDefaultContentItems>true</EnableDefaultContentItems>
 	  <IncludeReferencedProjects>true</IncludeReferencedProjects>
-	  <Version>1.0.1</Version>
+	  <Version>1.0.2</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -22,8 +22,6 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <IsTrimmable>True</IsTrimmable>
-    <IsAotCompatible>False</IsAotCompatible>
   </PropertyGroup>
 
 

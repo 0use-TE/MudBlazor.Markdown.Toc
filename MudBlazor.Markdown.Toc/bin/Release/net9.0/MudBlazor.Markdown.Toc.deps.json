@@ -6,10 +6,9 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "MudBlazor.Markdown.Toc/1.0.1": {
+      "MudBlazor.Markdown.Toc/1.0.2": {
         "dependencies": {
           "Microsoft.AspNetCore.Components.Web": "9.0.3",
-          "Microsoft.NET.ILLink.Tasks": "9.0.3",
           "MudBlazor.Markdown": "8.0.0"
         },
         "runtime": {
@@ -164,7 +163,6 @@
           }
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.3": {},
       "MudBlazor/8.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Components": "9.0.3",
@@ -193,7 +191,7 @@
     }
   },
   "libraries": {
-    "MudBlazor.Markdown.Toc/1.0.1": {
+    "MudBlazor.Markdown.Toc/1.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -302,13 +300,6 @@
       "sha512": "sha512-SIuEX0PXeWqeb/2Uih6sUXyTAouWRc7n5a5Dr4HAGFKOmw1/e3D5JOcMXq3xM2H6X2OMa4DVE2FJ8U7kn9cYYQ==",
       "path": "microsoft.jsinterop/9.0.3",
       "hashPath": "microsoft.jsinterop.9.0.3.nupkg.sha512"
-    },
-    "Microsoft.NET.ILLink.Tasks/9.0.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-1rqGTfubVg0qj2PsK6esyq3PIxtYJYrN3LsYUV9RrvH3anmt3fT3ozYdAZZH4U8JU/pt5pPIUk8NBSu26wtekA==",
-      "path": "microsoft.net.illink.tasks/9.0.3",
-      "hashPath": "microsoft.net.illink.tasks.9.0.3.nupkg.sha512"
     },
     "MudBlazor/8.0.0": {
       "type": "package",

@@ -274,3 +274,4 @@ C:\Users\Administrator\Desktop\Project\MudBlazor.Markdown.Toc\MudBlazor.Markdown
 C:\Users\Administrator\Desktop\Project\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Release\net9.0\staticwebassets\msbuild.buildMultiTargeting.MudMarkdown.Toc.props
 C:\Users\Administrator\Desktop\Project\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Release\net9.0\staticwebassets\msbuild.buildTransitive.MudMarkdown.Toc.props
 C:\Users\Administrator\Desktop\Project\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\obj\Release\net9.0\compressed\x9kzlbfdcx-sk32w8233j.gz
+C:\Users\Administrator\Desktop\Project\MudBlazor.Markdown.Toc\MudBlazor.Markdown.Toc\bin\Release\net9.0\Properties\launchSettings.json

@@ -1,8 +1,4 @@
 is_global = true
-build_property.EnableAotAnalyzer = 
-build_property.EnableSingleFileAnalyzer = 
-build_property.EnableTrimAnalyzer = true
-build_property.IncludeAllContentForSelfExtract = 
 build_property.TargetFramework = net9.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -26,6 +22,10 @@ build_property.EnableCodeStyleSeverity =
 
 [C:/Users/Administrator/Desktop/Project/MudBlazor.Markdown.Toc/MudBlazor.Markdown.Toc/MudMarkdownToc.razor]
 build_metadata.AdditionalFiles.TargetPath = TXVkTWFya2Rvd25Ub2MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/Project/MudBlazor.Markdown.Toc/MudBlazor.Markdown.Toc/Properties/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UHJvcGVydGllc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Administrator/Desktop/Project/MudBlazor.Markdown.Toc/MudBlazor.Markdown.Toc/_Imports.razor]
