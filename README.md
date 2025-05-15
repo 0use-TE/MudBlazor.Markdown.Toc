@@ -25,7 +25,7 @@ You can clone the repository locally, start the sample project, and experience i
 2. Install Package
 
    ```shell
-   NuGet\Install-Package MudMarkdown.Toc -Version 1.0.1
+    Install-Package MudMarkdown.Toc
    ```
 
    NuGet URL:[NuGet Gallery | MudMarkdown.Toc 1.0.1](https://www.nuget.org/packages/MudMarkdown.Toc/#readme-body-tab)
