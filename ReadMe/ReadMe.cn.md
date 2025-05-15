@@ -22,7 +22,7 @@
 2. 安装Nuget包   
 
    ```shell
-   NuGet\Install-Package MudMarkdown.Toc -Version 1.0.1
+   Install-Package MudMarkdown.Toc
    ```
 
    NuGet地址:[NuGet Gallery | MudMarkdown.Toc 1.0.1](https://www.nuget.org/packages/MudMarkdown.Toc/#readme-body-tab)
